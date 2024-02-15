@@ -1,0 +1,30 @@
+# air.toml
+
+# This is the root directory of your project.
+root = "."
+
+# Exclude these directories from watching.
+exclude_dir = ["assets", "tmp", "vendor"]
+
+[build]
+  # This is the directory where your main application file is located.
+  # It's relative to the project root.
+  binary = "./main"
+
+  # This is the command that will be executed to build your application.
+  cmd = "go build -o ./main"
+
+  # This is the entry point for your application.
+  # It's relative to the project root.
+  main = "main.go"
+
+  # This is the list of files and directories to watch for changes.
+  # You can add more if needed.
+  files = ["main.go", "templates/**/*.html"]
+
+  # This is the environment variables that will be set during the execution of your application.
+  # You can add more if needed.
+  env = [
+    "FIBER_PREFORK=false",
+    "FIBER_MODE=development",
+  ]
