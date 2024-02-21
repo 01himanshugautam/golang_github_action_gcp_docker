@@ -1,5 +1,7 @@
 # Use the official golang image as base
-FROM golang:latest AS builder
+FROM --platform=linux/amd64 golang:latest AS builder
+
+MAINTAINER "01himanshugautam@gmail.com"
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -27,7 +29,7 @@ WORKDIR /app
 COPY --from=builder /app/go_test .
 
 # Copy template files (if any)
-COPY templates /app/templates
+COPY public/ /app/public
 
 # Command to run the executable
 CMD ["./go_test"]

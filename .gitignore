@@ -1,0 +1,9 @@
+# Compiled Object files, Static and Binary executables
+*.exe
+*.out
+*.o
+
+# Dependency directories (remove the comment below if you're not using Go modules)
+# /vendor/
+
+*env*
