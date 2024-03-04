@@ -7,3 +7,5 @@
 # /vendor/
 
 *env*
+.vscode/
+tmp/
